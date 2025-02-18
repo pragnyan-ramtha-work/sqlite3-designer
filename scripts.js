@@ -7,7 +7,7 @@ const addBlockButton = document.getElementById('add-block-button');
 let currentQuery = '';
 let customBlocks = [];
 
-const initialBlocks = ['SELECT', 'INSERT', 'UPDATE', 'DELETE','('];
+const initialBlocks = ['SELECT', 'INSERT', 'UPDATE', 'DELETE'];
 const allBlocks = ['SELECT', 'INSERT', 'UPDATE', 'DELETE', 'AND', 'OR', 'NOT', 'NULL', 'IS', 'AS', 'CASE', 'DEFAULT', 'PRIMARY', 'FOREIGN', 'INDEX', 'UNIQUE', 'CHECK', 'EXISTS', 'LIKE', 'IN', 'BETWEEN', 'UNION', 'INTERSECT', 'CREATE', 'ALTER', 'DROP', 'TABLE', 'FROM', 'WHERE', 'JOIN', 'GROUP BY', 'ORDER BY', 'HAVING', 'INSERT INTO', 'VALUES', 'SET', 'ON', 'INTO', 'AVG', 'COUNT', '*', '(', ')', ';', ',', '=','>','<','>=','<=','.'];
 const subBlocks = {
     'SELECT': ['X', 'COUNT', '*', 'AVG', 'FROM', ';'],
