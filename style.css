@@ -1,0 +1,75 @@
+@keyframes block-click {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+@keyframes query-update {
+    from { background-color: #202123; }
+    to { background-color: #555; }
+}
+
+body {
+    background-color: #202123; /* Background color */
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#query-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #333; /* Lighter shade */
+    border: 1px solid #555;
+    border-radius: 15px; /* More rounded corners */
+    width: 80%;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+#blocks-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+.block {
+    padding: 20px;
+    background-color: #333; /* Lighter shade */
+    border: 1px solid #555;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border-radius: 15px; /* More rounded corners */
+}
+.block:hover {
+    background-color: #555;
+}
+.block:active {
+    animation: block-click 0.3s ease-in-out;
+}
+#query {
+    flex-grow: 1;
+    user-select: all;
+}
+#copy-button, #more-button, #add-block-button {
+    padding: 10px;
+    background-color: #202123; /* Element color */
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 15px; /* More rounded corners */
+    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+#copy-button:hover, #more-button:hover, #add-block-button:hover {
+    background-color: #555;
+}
+#more-button, #add-block-button {
+    margin-top: 10px;
+}
